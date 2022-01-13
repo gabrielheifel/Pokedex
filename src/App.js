@@ -1,10 +1,8 @@
-import './App.css';
-import HomePage from './pages/HomePage/HomePage';
+import HomePage from './HomePage'
 
 function App() {
   return (
     <div className="App">
-      {/* Personal Pokédex */}
       <HomePage />
     </div>
   );
