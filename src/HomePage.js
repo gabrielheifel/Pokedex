@@ -1,25 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import PokemonCard from './components/PokemonCard';
+import NavBar from './components/NavBar/NavBar';
+import PokemonCard from './components/PokemonCard/PokemonCard'
 import './styles/HomePage.css';
-import Logo from './images/logo.png';
+import Arrow from './images/up-arrow.png';
 
 const URL = 'https://pokeapi.co/api/v2/pokemon';
 
 const HomePage = () => {
 
   const [pokemons, setPokemons] = useState([]);
-  const [loadMore, setLoadMore] = useState(URL+'?limit=9')
+  const [loadMore, setLoadMore] = useState(URL+'?offset=9&limit=9');
+  const [showPokemons, setShowPokemons] = useState(URL+'?limit=9')
+  const [filter, setFilter] = useState('');
 
   const getPokemons = async() => {
 
     // Carrega os Pokemons que serão exibidos
-    const res = await fetch(loadMore)
+    const res = await fetch(showPokemons)
     const dataJson = await res.json()
     const results = (dataJson.results)
 
-    setLoadMore(dataJson.next)
-    
+    // setLoadMore(URL+`?offset=${}&limit=9`)
+    setShowPokemons(dataJson.next)
+    console.log(dataJson)
+
     // Puxa as informções dos pokemons carregados anteriormente
     const createPokemonCard = results => {
       results.forEach( async (result) => {
@@ -28,11 +33,20 @@ const HomePage = () => {
         
         // seta a lista de pokemons com as info carregadas
         setPokemons( list => [...list, dataJson] )
-        
-        console.log(dataJson)
+
       })
     } 
     createPokemonCard(results);
+  }
+
+  const handleSearchChange = e => {
+    setFilter(e.target.value)
+  }
+
+  const handleGen = e => {
+    setShowPokemons(URL+e.target.value)
+    console.log(URL+e.target.value)
+    getPokemons()
   }
 
   useEffect(() => {
@@ -42,21 +56,14 @@ const HomePage = () => {
 
   return (
     <>
-      <div className='container'>
-        <div className="navbar">
-          <img src={Logo} alt="pokedex" />
-          <input type="text" className='search' id="search" />
-        </div>
+      <div className='container' id='main-container'>
+        <NavBar search={handleSearchChange} gen={handleGen} />
         <ul className='list'>
           {pokemons.map((pokemon, index) => {
-            return(            
-              <PokemonCard 
-                key={index}
-                id={pokemon.id}
-                image={pokemon.sprites.front_default}
-                name={pokemon.name}
-                type={pokemon.types[0].type.name}
-              />
+            pokemons.sort((a, b) => a.id - b.id)
+            return(
+              pokemon.name.includes(filter) &&
+              <PokemonCard key={index} pokemon={pokemon} />
             )  
           })}
         </ul>
@@ -67,6 +74,12 @@ const HomePage = () => {
           onClick={() => getPokemons()}
         >
           Load More
+        </Link>
+        <Link 
+          className='arrow-content'
+          to='main-container' spy={true} smooth={true} offset={-20} duration={500}
+        >
+          <img src={Arrow} alt="totop" className='arrow-img' />
         </Link>
       </div>
     </>

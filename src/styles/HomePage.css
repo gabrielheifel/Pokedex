@@ -1,59 +1,53 @@
 .container {
   width: 100%;
-  background: #95dba6;
-
+  background: #c3cbc5;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.navbar {
-  display: flex;
-  flex-direction: column;
-  font-size: 3rem;
-  text-align: center;
-  margin: 0 0 20px 0;
-  padding: 1rem 0 0;
-}
-
-.search {
-  margin-top: 10px;
-  padding-left: 10px;
-  border-radius: 40px;
-  width: 100%;
-  height: 30px;
-  outline: none;
-  border: none;
-}
-
-.list {
+.container .list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px 20px;
 }
 
-.load-more {
+.container .load-more {
   width: 10%;
   margin: 20px 0 40px;
   background: #33d15b;
-  color: #fff;
+  color: #2f2f2f;
   font-weight: 700;
   text-align: center;
   border: none;
-  border-radius: 0.8rem;
+  border-radius: 16px;
   box-shadow: 0px 5px 70px #2f2f2f;
-  padding: 1rem 0;
+  padding: 1rem 0.5rem;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.load-more:hover {
-  background: #1a662d;
+.container .load-more:hover {
+  background: #207a36;
+  color: #fff;
+}
+
+.container .arrow-content {
+  position: fixed;
+  right: 35px;
+  bottom: 35px;
+}
+
+.container .arrow-img {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 650px) {
-  .list {
+  .container .list {
     display: flex;
     flex-direction: column;
     align-items: center;

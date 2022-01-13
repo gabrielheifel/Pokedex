@@ -1,0 +1,162 @@
+.bug {
+  background: #729f3f;
+}
+.card-bug {
+  background: #729f3f91;
+}
+.card-bug:hover {
+  background: #729f3f;
+}
+.dragon {
+  background: #53a4cf;
+}
+.card-dragon {
+  background: #53a4cf91;
+}
+.card-dragon:hover {
+  background: #53a4cf;
+}
+.fairy {
+  background: #fdb9e9;
+}
+.card-fairy {
+  background: #fdb9e991;
+}
+.card-fairy:hover {
+  background: #fdb9e9;
+}
+.fire {
+  background: #fd3824;
+}
+.card-fire {
+  background: #fd382491;
+}
+.card-fire:hover {
+  background: #fd3824;
+}
+.ghost {
+  background: #7b62a3;
+}
+.card-ghost {
+  background: #7b62a391;
+}
+.card-ghost:hover {
+  background: #7b62a3;
+}
+.ground {
+  background: #c5ac0e;
+}
+.card-ground {
+  background: #c5ac0e91;
+}
+.card-ground:hover {
+  background: #c5ac0e;
+}
+.normal {
+  background: #a4acaf;
+}
+.card-normal {
+  background: #a4acaf91;
+}
+.card-normal:hover {
+  background: #a4acaf;
+}
+.psychic {
+  background: #f366b9;
+}
+.card-psychic {
+  background: #f366b991;
+}
+.card-psychic:hover {
+  background: #f366b9;
+}
+.steel {
+  background: #9eb7b1;
+}
+.card-steel {
+  background: #9eb7b191;
+}
+.card-steel:hover {
+  background: #9eb7b1;
+}
+.dark {
+  background: #707070;
+}
+.card-dark {
+  background: #70707091;
+}
+.card-dark:hover {
+  background: #707070;
+}
+.electric {
+  background: #eed535;
+}
+.card-electric {
+  background: #eed53591;
+}
+.card-electric:hover {
+  background: #eed535;
+}
+.grass {
+  background: #33d15b;
+}
+.card-grass {
+  background: #33d15b91;
+}
+.card-grass:hover {
+  background: #33d15b;
+}
+.ice {
+  background: #51c4e7;
+}
+.card-ice {
+  background: #51c4e791;
+}
+.card-ice:hover {
+  background: #51c4e7;
+}
+.flying {
+  background: #3dc7ef;
+}
+.card-flying {
+  background: #3dc7ef91;
+}
+.card-flying:hover {
+  background: #3dc7ef;
+}
+.rock {
+  background: #a38c21;
+}
+.card-rock {
+  background: #a38c2191;
+}
+.card-rock:hover {
+  background: #a38c21;
+}
+.poison {
+  background: #9848af;
+}
+.card-poison {
+  background: #9848af91;
+}
+.card-poison:hover {
+  background: #9848af;
+}
+.fighting {
+  background: #d56723;
+}
+.card-fighting {
+  background: #d5672391;
+}
+.card-fighting:hover {
+  background: #d56723;
+}
+.water {
+  background: #4592c4;
+}
+.card-water {
+  background: #4592c491;
+}
+.card-water:hover {
+  background: #4592c4;
+}
