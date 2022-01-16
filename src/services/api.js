@@ -16,10 +16,12 @@ export const getPokemonsApi = async (url) => {
 };
 
 export const getPokemonDataApi = async (url, result) => {
-  const res = await fetch(url+`/${result.name}`)
-  const data = await res.json();
-  
-  return data 
+  try {
+    const res = await fetch(url+`/${result.name}`)
+    const data = await res.json();
+
+    return data 
+  } catch (err) {}
 }
 
 // export const getPokemons = async (offset = 0, limit = 3) => {

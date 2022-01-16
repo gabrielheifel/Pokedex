@@ -6,6 +6,7 @@
 
   padding: 20px;
   min-width: 200px;
+  max-width: 200px;
   min-height: 250px;
 
   border-radius: 43px;
@@ -62,7 +63,6 @@
   text-transform: capitalize;
   margin: 0;
   font-size: 0.8rem;
-  /* background: #33d15b; */
   padding: 5px 10px;
   border-radius: 10px;
 }

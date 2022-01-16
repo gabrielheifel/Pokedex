@@ -5,6 +5,8 @@ import './styles.css';
 
 const NavBar = props => {
 
+  // const [search] = props
+
   const [displayValue, setDisplayValue] = useState();
   const debouncedChange = useDebounce(props.search, 500);
 
@@ -22,10 +24,11 @@ const NavBar = props => {
           type="text"
           className='search' 
           placeholder='Search'
+          value={displayValue}
           onChange={handleChange} 
         />
         <div className="generations">
-          <button className='button' onClick={props.gen} value={151}>
+          <button className='button' value={151}>
             KANTO
           </button>
           <button className='button'>Gen 2</button>

@@ -1,162 +1,162 @@
+.grass {
+  background: #33d15b;
+}
+.bg-grass {
+  background: #33d15b91;
+}
+.bg-grass:hover {
+  background: #33d15b;
+}
 .bug {
   background: #729f3f;
 }
-.card-bug {
+.bg-bug {
   background: #729f3f91;
 }
-.card-bug:hover {
+.bg-bug:hover {
   background: #729f3f;
 }
 .dragon {
   background: #53a4cf;
 }
-.card-dragon {
+.bg-dragon {
   background: #53a4cf91;
 }
-.card-dragon:hover {
+.bg-dragon:hover {
   background: #53a4cf;
 }
 .fairy {
   background: #fdb9e9;
 }
-.card-fairy {
+.bg-fairy {
   background: #fdb9e991;
 }
-.card-fairy:hover {
+.bg-fairy:hover {
   background: #fdb9e9;
 }
 .fire {
   background: #fd3824;
 }
-.card-fire {
+.bg-fire {
   background: #fd382491;
 }
-.card-fire:hover {
+.bg-fire:hover {
   background: #fd3824;
 }
 .ghost {
   background: #7b62a3;
 }
-.card-ghost {
+.bg-ghost {
   background: #7b62a391;
 }
-.card-ghost:hover {
+.bg-ghost:hover {
   background: #7b62a3;
 }
 .ground {
   background: #c5ac0e;
 }
-.card-ground {
+.bg-ground {
   background: #c5ac0e91;
 }
-.card-ground:hover {
+.bg-ground:hover {
   background: #c5ac0e;
 }
 .normal {
   background: #a4acaf;
 }
-.card-normal {
+.bg-normal {
   background: #a4acaf91;
 }
-.card-normal:hover {
+.bg-normal:hover {
   background: #a4acaf;
 }
 .psychic {
   background: #f366b9;
 }
-.card-psychic {
+.bg-psychic {
   background: #f366b991;
 }
-.card-psychic:hover {
+.bg-psychic:hover {
   background: #f366b9;
 }
 .steel {
   background: #9eb7b1;
 }
-.card-steel {
+.bg-steel {
   background: #9eb7b191;
 }
-.card-steel:hover {
+.bg-steel:hover {
   background: #9eb7b1;
 }
 .dark {
   background: #707070;
 }
-.card-dark {
+.bg-dark {
   background: #70707091;
 }
-.card-dark:hover {
+.bg-dark:hover {
   background: #707070;
 }
 .electric {
   background: #eed535;
 }
-.card-electric {
+.bg-electric {
   background: #eed53591;
 }
-.card-electric:hover {
+.bg-electric:hover {
   background: #eed535;
-}
-.grass {
-  background: #33d15b;
-}
-.card-grass {
-  background: #33d15b91;
-}
-.card-grass:hover {
-  background: #33d15b;
 }
 .ice {
   background: #51c4e7;
 }
-.card-ice {
+.bg-ice {
   background: #51c4e791;
 }
-.card-ice:hover {
+.bg-ice:hover {
   background: #51c4e7;
 }
 .flying {
   background: #3dc7ef;
 }
-.card-flying {
+.bg-flying {
   background: #3dc7ef91;
 }
-.card-flying:hover {
+.bg-flying:hover {
   background: #3dc7ef;
 }
 .rock {
   background: #a38c21;
 }
-.card-rock {
+.bg-rock {
   background: #a38c2191;
 }
-.card-rock:hover {
+.bg-rock:hover {
   background: #a38c21;
 }
 .poison {
   background: #9848af;
 }
-.card-poison {
+.bg-poison {
   background: #9848af91;
 }
-.card-poison:hover {
+.bg-poison:hover {
   background: #9848af;
 }
 .fighting {
   background: #d56723;
 }
-.card-fighting {
+.bg-fighting {
   background: #d5672391;
 }
-.card-fighting:hover {
+.bg-fighting:hover {
   background: #d56723;
 }
 .water {
   background: #4592c4;
 }
-.card-water {
+.bg-water {
   background: #4592c491;
 }
-.card-water:hover {
+.bg-water:hover {
   background: #4592c4;
 }
