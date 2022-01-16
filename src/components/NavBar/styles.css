@@ -50,3 +50,7 @@
   background: #585c5a;
   color: #f1efef;
 }
+
+.navbar .button:active {
+  background: #066134;
+}

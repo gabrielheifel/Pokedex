@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react';
+import useDebounce from '../../services/useDebounce'
 import Logo from '../../images/logo.png';
 import './styles.css';
 
 const NavBar = props => {
+
+  const [displayValue, setDisplayValue] = useState();
+  const debouncedChange = useDebounce(props.search, 500);
+
+  const handleChange = e => {
+    setDisplayValue(e.target.value);
+    debouncedChange(e.target.value);
+  }
+  // console.log(displayValue)
 
   return (
     <>
@@ -11,11 +21,11 @@ const NavBar = props => {
         <input 
           type="text"
           className='search' 
-          placeholder='Search' 
-          onChange={props.search} 
+          placeholder='Search'
+          onChange={handleChange} 
         />
         <div className="generations">
-          <button className='button' onClick={props.gen} value={'?limit=151'}>
+          <button className='button' onClick={props.gen} value={151}>
             KANTO
           </button>
           <button className='button'>Gen 2</button>
