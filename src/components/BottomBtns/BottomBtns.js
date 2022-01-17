@@ -11,6 +11,7 @@ const BottomBtns = props => {
   const {setPokemons, loadMore, setLoadMore} = props;
 
   const handleLoadMore = async () => {
+    console.log(loadMore)
     const data = await getPokemonsApi(loadMore)
     const results = (data.results)
     setLoadMore(data.next)

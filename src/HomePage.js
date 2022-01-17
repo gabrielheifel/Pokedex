@@ -11,48 +11,61 @@ const HomePage = () => {
 
   const [pokemons, setPokemons] = useState([]);
   const [limit, setLimit] = useState(9);
-  const [loadMore, setLoadMore] = useState(url + `?limit=${limit}`);
-  const [filterName, setFilterName] = useState('');
   // const [offset, setOffset] = useState(0);
+  const [loadMore, setLoadMore] = useState(url+`?limit=${limit}`);
+  const [loading, setLoading] = useState(true)
+  const [searching, setSearching] = useState(false)
+  // const [filterName, setFilterName] = useState('');
 
+  
+  const onSearch = async(filterName) => {
+    if(!filterName){
+      showPokemons()
+    } else {
+      const data = await searchPokemonApi(filterName)
+      setPokemons([data])
+    }  
+  }
+
+  const showPokemons = async() => {
+    console.log('useEfect')
+    setLoading(true)
+    const data = await getPokemonsApi(loadMore)
+    const results = (data.results)
+    setLoadMore(data.next)
+
+    results.forEach(async (result) => {
+      const data = await getPokemonDataApi(url, result)
+      setPokemons(list => [...list, data])
+    })
+    setLoading(false)
+  }
+    
   useEffect(() => {
-    const defaultShowPokemons = async() => {
-      const data = await getPokemonsApi(loadMore)
-      const results = (data.results)
-      setLoadMore(data.next)
-
-      results.forEach(async (result) => {
-        const data = await getPokemonDataApi(url, result)
-        setPokemons(list => [...list, data])
-      })
-    }
-    defaultShowPokemons()
+    showPokemons()
   }, [])
-
-  const handleSearchChange = async() => {
-    const data = await searchPokemonApi(filterName)
-    const result = (data.results)
-    setPokemons(result)
-    console.log("search:", filterName)
-  }  
 
   return (
     <>
       <div className='container' id='main-container'>
         <NavBar
           // filterName={filterName}
-          // setFilterName={setFilterName}
-          search={() => setFilterName(handleSearchChange)}
+          // onSearch={search => setFilterName(search)}
+          onSearch={onSearch}
         />
-        <ul className='list'>
-          {pokemons.map((pokemon, index) => {
-            pokemons.sort((a, b) => a.id - b.id)
-            return (
-              // pokemon.name.includes(filterName) &&
-              <PokemonCard key={index} pokemon={pokemon} />
-            )
-          })}
-        </ul>
+        {loading ? (
+          <p>Carregando pokémons...</p>
+        ) : (
+          <ul className='list'>
+            {pokemons.map((pokemon, index) => {
+              pokemons.sort((a, b) => a.id - b.id)
+              return (
+                // pokemon.name.includes(filterName) &&
+                <PokemonCard key={index} pokemon={pokemon} />
+              )
+            })}
+          </ul>
+        )}
         <BottomBtns 
           setPokemons={setPokemons} 
           loadMore={loadMore}

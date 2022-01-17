@@ -31,34 +31,40 @@ const Modal = ({showModal, setShowModal, pokemon}) => {
                 {types.map((type) => {
                   return(
                     <div className='align-text'>
-                      <span className='bold'> Type: </span>
+                      {/* <span> Type: </span> */}
+                      <label> Type: </label>
                       <p className={type.type.name}>{type.type.name}</p>
                     </div>
                   )
                 })}
               </div>
-              <div className='left-block'>
-                <p className='sm-margin'>
-                  <span className='bold'>Height:</span> 
-                  {height}
-                </p>
-                <p className='sm-margin'>
-                  <span className='bold'>Weight:</span> 
-                  {weight}
-                </p>
-              </div>
-              <div className="left-block mb-zero">
-                <span className='sm-margin bold'>Abilities: </span>
-                {abilities.map((ability) => {
-                  return(
-                    <p className='ability sm-margin'>
-                      {ability.ability.name}
-                    </p>
-                  )
-                })}
+              <div className="infos-wrapper">
+                <div className='infos-block'>
+                  <p className='sm-margin'>
+                    <label>Height:</label> 
+                    {height}
+                  </p>
+                  <p className='sm-margin'>
+                    <label>Weight:</label> 
+                    {weight}
+                  </p>
+                </div>
+                <div className="abilities infos-block">
+                  <label className='sm-margin '>Abilities: </label>
+                  <div>
+                    {abilities.map((ability) => {
+                      return(
+                        <p className='ability sm-margin'>
+                          {ability.ability.name}
+                        </p>
+                      )
+                    })}
+
+                  </div>
+                </div>
               </div>
               <div className="shiny-wrapper">
-                <span className='bold italic'>Shiny Version:</span>
+                <label className='italic'>Shiny Version:</label>
                 <img src={sprites.front_shiny} alt={name} className='shiny-img' />
               </div>
             </main>
