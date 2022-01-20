@@ -3,6 +3,7 @@
 Projeto Frontend desenvolvido utilizando:
   - ReactJS
   - Hooks (useState, useEffect)
+  - react-scroll
   - PokeAPi
 
 ![](public/gifs/gif-1.gif)
