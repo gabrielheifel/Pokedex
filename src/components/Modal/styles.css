@@ -46,26 +46,31 @@
   align-items: center;
 }
 
-.modal-content .id {
+.id {
   font-size: 1.5rem;
   align-self: flex-start;
   margin: 10px;
 }
 
-.modal-content .name {
+.name {
   text-transform: uppercase;
   font-size: 3rem;
   margin: auto;
 }
 
-.modal-content .type-content {
-  margin-bottom: 20px;
+.type-content {
+  margin-bottom: 25px;
   width: 70%;
   display: flex;
   justify-content: space-around;
 }
 
-.modal-content .type-content p {
+.type-content .align-text {
+  display: flex;
+  align-items: center;
+}
+
+.type-content .type {
   text-transform: capitalize;
   font-weight: 400;
   margin: 0;
@@ -73,58 +78,54 @@
   border-radius: 10px;
 }
 
-.modal-content .infos-wrapper {
-  width: 100%;
+.size {
+  width: 50%;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-}
-
-.infos-block {
-  margin: 20px;
-  align-self: flex-start;
-}
-
-.sm-margin {
-  margin: 5px;
+  flex-direction: row;
 }
 
 .modal-content label {
   font-weight: bold;
   margin-right: 5px;
+  text-transform: capitalize;
 }
 
-.align-text {
+.modal-content .mg-zero {
+  margin: 0;
+}
+
+.infos-wrapper {
+  margin-top: 25px;
+  width: 100%;
   display: flex;
-  align-items: center;
-  /* text-align: center; */
-}
-
-.mb-zero {
-  margin-bottom: 0;
-}
-
-.modal-content .abilities {
-  display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: flex-start;
 }
 
-.modal-content .ability {
-  text-transform: uppercase;
+.stat {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ability {
+  margin-top: 5px;
+  text-transform: capitalize;
 }
 
 .italic {
   font-style: italic;
 }
 
-.modal-content .shiny-wrapper {
+.shiny-wrapper {
   display: flex;
   align-items: center;
 }
 
-.modal-content .shiny-wrapper .shiny-img {
+.shiny-wrapper .shiny-img {
   width: 125px;
   height: 125px;
   margin: 0 0 10px 10px;

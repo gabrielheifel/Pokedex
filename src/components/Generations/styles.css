@@ -1,0 +1,29 @@
+.generations {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+
+.button {
+  width: 20%;
+  background: #e0e9e3;
+  color: #2f2f2f;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  border-radius: 16px;
+  padding: 10px 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #25e485;
+}
+
+.button:focus {
+  background: #1aa05d;
+  color: #f1efef;
+}

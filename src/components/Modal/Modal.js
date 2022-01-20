@@ -5,7 +5,7 @@ import './styles.css';
 
 const Modal = ({showModal, setShowModal, pokemon}) => {
 
-  const {sprites, name, types, id, height, weight, abilities} = pokemon
+  const {sprites, name, types, id, height, weight, stats, abilities} = pokemon
   const {other} = sprites
   const [typed, setTyped] = useState();
 
@@ -33,28 +33,42 @@ const Modal = ({showModal, setShowModal, pokemon}) => {
                     <div className='align-text'>
                       {/* <span> Type: </span> */}
                       <label> Type: </label>
-                      <p className={type.type.name}>{type.type.name}</p>
+                      <p className={`type ${type.type.name}`}>{type.type.name}</p>
                     </div>
                   )
                 })}
               </div>
+              <div className='size'>
+                <p className='mg-zero'>
+                  <label>Height:</label> 
+                  {height}
+                </p>
+                <p className='mg-zero'>
+                  <label>Weight:</label> 
+                  {weight}
+                </p>
+              </div>
               <div className="infos-wrapper">
-                <div className='infos-block'>
-                  <p className='sm-margin'>
-                    <label>Height:</label> 
-                    {height}
+                <div>
+                  <p className='stat'>
+                    <label> {stats[0].stat.name}: </label>
+                    {stats[0].base_stat}
                   </p>
-                  <p className='sm-margin'>
-                    <label>Weight:</label> 
-                    {weight}
+                  <p className='stat'>
+                    <label> {stats[1].stat.name}: </label>
+                    {stats[1].base_stat}
+                  </p>
+                  <p className='stat'>
+                    <label> {stats[2].stat.name}: </label>
+                    {stats[2].base_stat}
                   </p>
                 </div>
-                <div className="abilities infos-block">
-                  <label className='sm-margin '>Abilities: </label>
-                  <div>
+                <div>
+                  <label>Abilities: </label>
+                  <div className='ability'>
                     {abilities.map((ability) => {
                       return(
-                        <p className='ability sm-margin'>
+                        <p className='mg-zero'>
                           {ability.ability.name}
                         </p>
                       )
