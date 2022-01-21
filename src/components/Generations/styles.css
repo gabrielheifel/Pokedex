@@ -27,3 +27,11 @@
   background: #1aa05d;
   color: #f1efef;
 }
+
+@media screen and (max-width: 580px) {
+  .generations {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+  }
+}

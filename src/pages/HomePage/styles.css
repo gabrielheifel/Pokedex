@@ -13,7 +13,12 @@
   grid-gap: 30px 20px;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
+  .container .list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 500px) {
   .container .list {
     display: flex;
     flex-direction: column;

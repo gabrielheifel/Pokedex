@@ -31,7 +31,6 @@ const Modal = ({showModal, setShowModal, pokemon}) => {
                 {types.map((type) => {
                   return(
                     <div className='align-text'>
-                      {/* <span> Type: </span> */}
                       <label> Type: </label>
                       <p className={`type ${type.type.name}`}>{type.type.name}</p>
                     </div>
